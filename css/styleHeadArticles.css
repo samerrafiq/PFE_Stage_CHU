@@ -1,0 +1,95 @@
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+ 
+* {
+    margin: 0;
+    padding: 0;
+}
+.nav {
+    background: #7CF142;
+    height: 60px;
+    display: inline-block;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+ 
+.nav li {
+    float: left;
+    list-style-type: none;
+    position: relative;
+}
+.nav li a {
+    font-size: 16px;
+    color: white;
+    display: block;
+    line-height: 60px;
+    padding: 0 26px;
+    text-decoration: none;
+    font-family: Montserrat, sans-serif;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+.rechercher-bar {
+    display: flex;
+    margin-top: 10px;
+}
+
+.rechercher-bar form {
+    width: 80%;
+    margin-right: -200px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    border: rgb(0, 155, 252) solid 1px;
+    height: 35px;
+    padding: 1px 0;
+    border-radius: 8px;
+}
+
+.rechercher-bar form select {
+    border: none;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    background: #7CF142;
+    color: white;
+    font-size: 14px;
+}
+
+.rechercher-bar input {
+    background: white;
+    border: none;
+    flex: 1;
+    outline: none;
+    font-size: 14px;
+    border-radius: 4px;
+    color: black;
+    height: 33px;
+    size: 100;
+    font-weight: 400;
+    width: 550px;
+    padding-left: 20px;
+}
+
+::placeholder {
+    color: #CBDDD6;
+}
+
+.rechercher-bar button {
+    border: 0;
+    background: rgb(0, 155, 252);
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    height: 33px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.rechercher-bar button img {
+    height: 25px;
+    width: 25px;
+}

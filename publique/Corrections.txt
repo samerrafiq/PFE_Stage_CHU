@@ -1,0 +1,53 @@
+============================== Espace admin=====================================
+- Gestion des articles , Formulaire Ajouter et modifier ( Changer la forme des formulaires 
+complaitement ) = Ajouter le text area moderne ( DIR B7AL LI ENDKOM F LPROJET WERIHLI 
+NA9CHOUH 3AD DIROU ). 
+-L'overflow dans touts les pages d'espace administrateur .
+-Les statistiques mais avant on doit terminer la partie de formulaire. 
+==============================================================================
+
+============================= Espace Publique ===================================
+-Ajouter le fomulaire d'inscription et déconection avec le script.
+-Le formulaire de declaration doit etre comme le formulaire du passport en arabe et en français.
+-Ajouter la traduction des principale phrase du page index soit avec un api ou avec javascript.
+-L'overflow des titres de les articles de la pagge index (cas d'un titre trop langue).
+-Les logo.
+-Les lien §§§§.
+-Newslettre.
+-Qui nous sommes et des articles statique comme le site du maroc ou bien des articles en arabe.
+-Overfow dans  la page article dans la paragraphe.
+-Css dans la barre de recherche et pour les page (1-2-3) dans la page des articles).
+-Les medicaments recherche et afichage.
+==============================================================================
+
+============================Espace Personnel ====================================
+- Un index ou il peut voir les articles eetune page des medicaments.
+-Une page dashboard ou il y'a deux lien une page pour filtre et voir et consulter les declarations
+ et une page de messagerie.(Donné létat du declaration).
+-/+ une page pour modifier ces information personnels ou ajouter une photo.
+-Formulaire de contact d'adminstrateur (Et nQdro nzido signalé article).
+==============================================================================
+
+========================Espace Utilisateur ========================================
+-Presque le meme de espace publique.
+-Index avec un header different : comme de projet du troc, messagerie , 
+-Articles le meme avec possibilité d'ajouter des commentaires.
+-Suivi des declarations.
+-Medicaments la meme du espace public avec header differrent.
+-Le reste tout le meme avec le header differrent.
+==============================================================================
+
+======================Base de donné ============================================
+-Modifications au niveau de la base de données (Ajouter un id de l'utilisateurdans la table 
+declaration  pour la recuperer dans la messagerie ).
+-Ajouter un champs dans la ata ble declaration pour gere le mecanisme du suivi de declaration.
+...?
+==============================================================================
+ 
+
+
+
+
+
+
+

@@ -1,0 +1,131 @@
+/* declaration button */
+.declarerbtn {
+    background-color: #67bc00;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    color: aliceblue;
+    align-content: center;
+    margin-left: 400px;
+}
+
+.declarerbtn img {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+.voir-plus button {
+	border: 0;
+	background: rgb(0, 155, 252);
+	cursor: pointer;
+	font-size: 14px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	color: white;
+	align-items: center;
+	display: flex;
+	margin-bottom: 50px;
+	right: auto;
+}
+
+.voir-plus button:hover, .button:hover {
+	background: rgb(0, 98, 255);
+}
+
+.voir-plus {
+	display: flex;
+	justify-content: center;
+}
+
+.declarerbtn:hover {
+    background-color: transparent;
+    border-color: transparent;
+    color: aliceblue;
+}
+
+
+
+
+.banner-area {
+    margin-top: 70px;
+}
+
+.search-form {
+    color: aliceblue;
+}
+
+/*------------logo-------------*/
+
+#logo a {
+    padding-top: 10px;
+    font-size: 65px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    color: rgb(72, 102, 151);
+
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.80);
+}
+
+#logo {
+    display: flex;
+}
+
+#logo span {
+
+    font-size: 20px;
+    text-align: center;
+    color: rgb(70, 102, 152);
+}
+
+/*--------comment ca marche ------------*/
+#commentcm a {
+    color: white;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-weight:bold; 
+}
+#commentcm:hover a {
+    color: #8fff06;
+    background-color: white;
+    color: green;
+}
+.myButton {
+    background-color:transparent;
+    border-radius:15px;
+    border:2px solid #18ab29;
+    display:inline-block;
+    cursor:pointer;
+    color:#e6d8e6;
+    font-family:Courier New;
+    font-size:17px;
+    padding:12px;
+    text-decoration:none;
+}
+.myButton:hover {
+    background-color:white;
+    color: green;
+    font-weight: bold;
+}
+.myButton:active {
+    position:relative;
+    top:1px;
+}
+#logochu{
+    font-size: 30px;
+    margin-right: 20px;
+    margin-left : 10px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+.single-service{
+    border : 2px solid green;
+    padding: 20px;
+    border-radius: 10px; 
+    cursor: pointer;
+}
+.single-service:hover{
+    width: 300px;
+    height: 400px;
+}

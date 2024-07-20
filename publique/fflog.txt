@@ -1,0 +1,118 @@
+<?php
+
+ include "../conn.php" ;
+ //
+session_start();
+if(isset($_SESSION['code_per'])) {
+    header("location: ../personnel/index.php");
+    exit();
+}
+if(isset($_SESSION['code_adm'])) {
+    header('location: ../EspaceAdmin/index.php');
+    exit();
+}
+session_destroy();
+//
+
+?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="../css/stylelogin.css">
+
+    <title>Connexion</title>
+  </head>
+  <body>
+  
+      <!-- start header -->
+                <?php  include"header.php" ?>
+    <!-- end header --> 
+
+<?php
+    if(isset($_POST['connexion'])) {
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $result_adm = mysqli_query($conn, "SELECT * FROM administrateurs WHERE email = '$email'");
+        $result_per = mysqli_query($conn, "SELECT * FROM personnels WHERE email = '$email'");
+        $result_dec = mysqli_query($conn, "SELECT * FROM declaration WHERE email = '$email'");
+        if(mysqli_num_rows($result_adm) > 0) {
+            $ligne = mysqli_fetch_assoc($result_adm);
+            if(password_verify($password, $ligne['password'])) {
+                session_start();
+                $_SESSION['code_adm'] = $ligne['code_adm'];
+                print("<script> window.location.replace('../EspaceAdmin/index.php'); </script>");
+
+                exit();
+            }
+        } else if(mysqli_num_rows($result_per) > 0) {
+            $ligne = mysqli_fetch_assoc($result_per);
+            if(password_verify($password, $ligne['password'])) {
+                session_start();
+                $_SESSION['code_per'] = $ligne['code_per'];
+                print("<script> window.location.replace('../personnel/index.php'); </script>");
+                exit();
+            }
+        } else if(mysqli_num_rows($result_dec) > 0) {
+            $ligne = mysqli_fetch_assoc($result_per);
+            if(password_verify($password, $ligne['password'])) {
+                session_start();
+                $_SESSION['id_dec'] = $ligne['id_dec'];
+                print("<script> window.location.replace('../declarateur/index.php'); </script>");
+                exit();
+            }
+        } 
+    } 
+    ?>
+
+  <div class="content" style="margin-top: 60px;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <!-- <div class="col-md-6 order-md-2">
+          <img src="img/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
+        </div> -->
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-12">
+              <div class="form-block">
+                  <div class="mb-4">
+                  <h3><strong>Connexion</strong></h3>
+                  <p class="mb-4">Some text here Some text here Some text here.</p>
+                </div>
+                <form action="#" method="post">
+                  <div class="form-group first">
+                    
+                    <input type="email" class="form-control" name="email" required placeholder="Email">
+
+                  </div>
+                  <div class="form-group last mb-4">
+                    <input type="password" class="form-control" name="password" required placeholder="Mot de passe"> 
+                    
+                  </div>
+                  
+                  <div class="d-flex mb-5 align-items-center">
+                    
+                  </div>
+
+                  <input type="submit" value="Connexion" class="btn btn-pill text-white btn-block btn-primary" name="connexion">
+                </form>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </div>
+  </div>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+  </body>
+</html>
